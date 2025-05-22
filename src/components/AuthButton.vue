@@ -1,5 +1,8 @@
 <template>
-  <button class="auth-btn" :type="type">
+  <button
+    class="bg-blue-500 text-white px-5 py-2 rounded-md font-bold cursor-pointer hover:bg-blue-600 transition"
+    :type="type"
+  >
     {{ label }}
   </button>
 </template>
@@ -11,17 +14,4 @@ const props = defineProps({
 })
 </script>
 
-<style scoped>
-.auth-btn {
-  background-color: #3498db;
-  color: white;
-  padding: 0.6rem 1.2rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-}
-.auth-btn:hover {
-  background-color: #2980b9;
-}
-</style>
+
