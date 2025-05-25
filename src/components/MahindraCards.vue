@@ -6,7 +6,13 @@
       :to="`/mahindra/${car.id}`"
       class="card-link"
     >
+<<<<<<< Updated upstream
       <div class="car-card">
+=======
+      <div
+        class="bg-white-50 p-4 w-48 rounded-xl shadow-md text-center cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
+      >
+>>>>>>> Stashed changes
         <h3>{{ car.name }}</h3>
         <p>{{ car.model }}</p>
       </div>

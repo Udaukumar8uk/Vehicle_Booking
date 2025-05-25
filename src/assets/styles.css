@@ -1,11 +1,12 @@
 /* styles.css */
-body {
+ @import "tailwindcss"; 
+/* body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(to right, #c9d6ff, #e2e2e2);
   margin: 0;
   padding: 0;
-}
-
+} */
+/* 
 .signup-container,
 .login-container,
 .welcome-container {
@@ -15,18 +16,18 @@ body {
   padding: 40px;
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
+} */
 
-h1 {
+/* h1 {
   text-align: center;
-  color: #333;
+  color: #1f11eb;
   margin-bottom: 25px;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 25px;
 }
 
 input {
@@ -37,13 +38,13 @@ input {
 }
 
 input:focus {
-  border-color: #5b73e8;
+  border-color: #e85b60;
   outline: none;
 }
 
 button {
   padding: 12px;
-  background-color: #5b73e8;
+  background-color: #e60fc6;
   color: white;
   font-weight: bold;
   border: none;
@@ -53,7 +54,7 @@ button {
 }
 
 button:hover {
-  background-color: #3b54d1;
+  background-color: #d13b42;
 }
 
 p {
@@ -62,7 +63,7 @@ p {
 }
 
 router-link {
-  color: #5b73e8;
+  color: #e85b69;
   text-decoration: none;
 }
 
@@ -73,4 +74,4 @@ router-link {
     margin: 50px 20px;
     padding: 25px;
   }
-}
+} */

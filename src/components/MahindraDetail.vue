@@ -1,22 +1,25 @@
 <template>
-  <div class="car-detail">
-    <h2>Car Details</h2>
+  <div class="max-w-md mx-auto p-4 bg-white-100 rounded shadow mt-6">
+    <h2 class="text-xl font-bold mb-4">Car Details</h2>
     <p><strong>Name:</strong> {{ car.name }}</p>
     <p><strong>Model:</strong> {{ car.model }}</p>
     <p><strong>Year:</strong> {{ car.year }}</p>
     <p><strong>Price:</strong> {{ car.price }}</p>
-    <button class="book-btn" @click="bookCar">Book Now</button>
+    <router-link
+      :to="{ path: `/book/${id}`, query: { step: 'address' } }"
+      class="mt-4 inline-block bg-red-500 text-white py-2 px-4  rounded hover:bg-blue-700 transition"
+    >
+      Book Now
+    </router-link>
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue';
-import { useRouter, useRoute } from 'vue-router';
 
-const router = useRouter();
-const route = useRoute();
+const props = defineProps(['id']);
+const { id } = props;
 
-const carId = route.params.id;
 const car = ref({});
 
 const cars = {
@@ -27,33 +30,6 @@ const cars = {
 };
 
 onMounted(() => {
-  car.value = cars[carId] || { name: 'Unknown', model: '-', year: '-', price: '-' };
+  car.value = cars[id] || { name: 'Unknown', model: '-', year: '-', price: '-' };
 });
-
-function bookCar() {
-  router.push({ path: `/book/${carId}`, query: { step: 'address' } });
-}
-
-
 </script>
-
-<style scoped>
-.car-detail {
-  max-width: 600px;
-  margin: 2rem auto;
-  padding: 2rem;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  background-color: #f9f9f9;
-}
-
-.book-btn {
-  margin-top: 1rem;
-  background-color: #e74c3c;
-  color: white;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-</style>

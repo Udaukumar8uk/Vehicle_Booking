@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Signup from '../pages/Signup.vue';
 import Login from '../pages/Login.vue';
 import Welcome from '../pages/Welcome.vue';
-import Home from '../pages/Home.vue';
+import CarBrands from '../pages/CarBrands.vue';
 import AboutUs from '../pages/AboutUs.vue';
 import Contact from '../pages/Contact.vue';
 import Mahindra from '../pages/Mahindra.vue';
@@ -15,15 +15,17 @@ const routes = [
   { path: '/signup', name: 'Signup', component: Signup },
   { path: '/login', name: 'Login', component: Login },
   { path: '/welcome', name: 'Welcome', component: Welcome },
-  { path: '/home', name: 'Home', component: Home },
+  { path: '/CarBrands', name: 'CarBrands', component: CarBrands },
   { path: '/about', name: 'AboutUs', component: AboutUs },
   { path: '/contact', name: 'Contact', component: Contact },
   { path: '/mahindra', name: 'Mahindra', component: Mahindra }, 
   {
-    path: '/mahindra/:id',
-    name: 'MahindraDetail',
-    component: MahindraDetail
+  path: '/mahindra/:id',
+  name: 'MahindraDetail',
+  component: MahindraDetail,
+  props: true  // <-- add this line
   },
+
   {
     path: '/book/:carName',
     name: 'Book',

@@ -1,5 +1,12 @@
 <template>
+<<<<<<< Updated upstream
   <button class="auth-btn" :type="type">
+=======
+  <button
+    class="bg-red-500 text-white px-5 py-2 rounded-md font-bold cursor-pointer hover:bg-blue-600 transition"
+    :type="type"
+  >
+>>>>>>> Stashed changes
     {{ label }}
   </button>
 </template>

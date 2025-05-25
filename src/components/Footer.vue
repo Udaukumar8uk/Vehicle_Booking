@@ -1,16 +1,23 @@
 <script setup>
-import { useRouter } from 'vue-router'
-const router = useRouter()
-
 function logout() {
   localStorage.removeItem('loggedIn')
-  router.push('/login')
+  window.location.href = '/login' // or use replace to avoid back navigation
 }
 </script>
 
 <template>
+<<<<<<< Updated upstream
   <div class="footer">
     <button class="logout-btn" @click="logout">Logout</button>
+=======
+  <div class="flex justify-center items-center p-4">
+    <button
+      @click="logout"
+      class="px-6 py-2 bg-red-600 text-white font-semibold rounded-md hover:bg-blue-700 transition"
+    >
+      Logout
+    </button>
+>>>>>>> Stashed changes
   </div>
 </template>
 

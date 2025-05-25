@@ -47,10 +47,4 @@ function navigateStep(nextStep) {
 }
 </script>
 
-<style scoped>
-.booking-container {
-  max-width: 600px;
-  margin: auto;
-  padding: 2rem;
-}
-</style>
+
