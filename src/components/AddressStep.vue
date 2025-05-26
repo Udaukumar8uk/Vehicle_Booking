@@ -1,58 +1,54 @@
 <template>
-  <div class="booking-step">
-    <h2>Book Your Car: {{ carName }}</h2>
-    <h3>Step 1: Enter Delivery Address</h3>
-    <form @submit.prevent="emitGoToPayment">
+  <div class="max-w-md mx-auto mt-8 p-6 border rounded bg-white shadow">
+    <h2 class="text-2xl font-semibold mb-4">Booking Your Car: {{ carName }}</h2>
+    <h3 class="text-lg mb-6">Step 1: Enter Delivery Address</h3>
+    <form @submit.prevent="emitGoToPayment" class="space-y-4">
       <div>
-        <label>Name:</label>
-        <input v-model="booking.address.name" required />
+        <label class="block mb-1 font-medium">Name:</label>
+        <input
+          v-model="booking.address.name"
+          required
+          class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-500"
+        />
       </div>
       <div>
-        <label>Street:</label>
-        <input v-model="booking.address.street" required />
+        <label class="block mb-1 font-medium">Street:</label>
+        <input
+          v-model="booking.address.street"
+          required
+          class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-500"
+        />
       </div>
       <div>
-        <label>City:</label>
-        <input v-model="booking.address.city" required />
+        <label class="block mb-1 font-medium">City:</label>
+        <input
+          v-model="booking.address.city"
+          required
+          class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-500"
+        />
       </div>
       <div>
-        <label>Zip Code:</label>
-        <input v-model="booking.address.zip" required />
+        <label class="block mb-1 font-medium">Zip Code:</label>
+        <input
+          v-model="booking.address.zip"
+          required
+          class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-500"
+        />
       </div>
-      <button type="submit">Next: Payment</button>
+      <button
+        type="submit"
+        class="w-full bg-red-600 text-white py-2 rounded hover:bg-red-700 transition-colors"
+      >
+        Next
+      </button>
     </form>
   </div>
 </template>
 
 <script setup>
-const props = defineProps(['carName', 'booking'])
-const emit = defineEmits(['navigate'])
+const props = defineProps(['carName', 'booking']);
+const emit = defineEmits(['navigate']);
 function emitGoToPayment() {
-  emit('navigate', 'payment')
+  emit('navigate', 'payment');
 }
 </script>
-
-<style scoped>
-.booking-step {
-  max-width: 500px;
-  margin: 2rem auto;
-  padding: 1rem 2rem;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  background: #fefefe;
-}
-form div {
-  margin-bottom: 1rem;
-}
-input {
-  margin-left: 0.5rem;
-}
-button {
-  padding: 0.5rem 1rem;
-  background: #e74c3c;
-  border: none;
-  color: white;
-  cursor: pointer;
-  border-radius: 5px;
-}
-</style>

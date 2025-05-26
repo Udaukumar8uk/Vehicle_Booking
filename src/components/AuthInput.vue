@@ -4,7 +4,7 @@
     :placeholder="placeholder"
     :value="modelValue"
     @input="$emit('update:modelValue', $event.target.value)"
-    class="auth-input"
+    class="w-full px-3 py-2 mb-4 rounded border border-gray-300 text-base transition-colors duration-300 focus:outline-none focus:border-gray-800"
   />
 </template>
 
@@ -12,23 +12,6 @@
 const props = defineProps({
   type: { type: String, default: 'text' },
   placeholder: { type: String, default: '' },
-  modelValue: { type: String, required: true }
+  modelValue: { type: String, required: true },
 })
 </script>
-
-<style scoped>
-.auth-input {
-  width: 100%;
-  padding: 10px 12px;
-  margin-bottom: 15px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-size: 16px;
-  box-sizing: border-box;
-  transition: border-color 0.3s ease;
-}
-.auth-input:focus {
-  outline: none;
-  border-color: #2c3e50;
-}
-</style>
