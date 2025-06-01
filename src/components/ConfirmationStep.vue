@@ -1,8 +1,8 @@
 <template>
   <div class="max-w-md mx-auto mt-8 p-6 border rounded bg-gray-50 text-center text-gray-800 shadow-md">
-    <h2 class="text-2xl font-bold mb-4 text-blue-700">Your Booked Car: {{ carName }}</h2>
+    <h2 class="text-2xl font-bold mb-4 text-blue-700">Your Booked Car: {{ carId }}</h2>
     <h3 class="text-lg mb-2 font-semibold text-green-600">Booking Confirmed!</h3>
-    <p class="mb-4 text-gray-600">Your {{ carName }} has been booked successfully.</p>
+    <p class="mb-4 text-gray-600">Your {{ carId }} has been booked successfully.</p>
     <p class="font-semibold text-gray-700">Delivery to:</p>
     <p class="mb-2 text-gray-600">
       {{ booking.address.name }}, {{ booking.address.street }},<br />
@@ -16,5 +16,5 @@
 </template>
 
 <script setup>
-const props = defineProps(['carName', 'booking']);
+const props = defineProps(['carId', 'booking']);
 </script>

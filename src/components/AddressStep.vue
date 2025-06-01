@@ -1,6 +1,6 @@
 <template>
   <div class="max-w-md mx-auto mt-8 p-6 border rounded bg-white shadow">
-    <h2 class="text-2xl font-semibold mb-4">Booking Your Car: {{ carName }}</h2>
+    <h2 class="text-2xl font-semibold mb-4">Booking Your Car: {{ carId }}</h2>
     <h3 class="text-lg mb-6">Step 1: Enter Delivery Address</h3>
     <form @submit.prevent="emitGoToPayment" class="space-y-4">
       <div>
@@ -37,7 +37,7 @@
       </div>
       <button
         type="submit"
-        class="w-full bg-red-600 text-white py-2 rounded hover:bg-red-700 transition-colors"
+        class="w-full bg-red-600 text-white py-2 rounded hover:bg-blue-700 transition-colors"
       >
         Next
       </button>
@@ -46,7 +46,7 @@
 </template>
 
 <script setup>
-const props = defineProps(['carName', 'booking']);
+const props = defineProps(['carId', 'booking']);
 const emit = defineEmits(['navigate']);
 function emitGoToPayment() {
   emit('navigate', 'payment');

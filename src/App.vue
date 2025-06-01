@@ -7,5 +7,5 @@
 
 
 <script setup>
-import Footer from './components/Footer.vue'; // <-- Use relative path if alias fails
+import Footer from './components/Footer.vue'; // 
 </script>

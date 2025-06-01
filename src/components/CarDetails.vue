@@ -23,10 +23,24 @@ const { id } = props;
 const car = ref({});
 
 const cars = {
-  '100': { name: 'Mahindra 100', model: 'XUV100', year: 2022, price: '$10,000' },
+  
+  '10': { name: 'Mahindra 100', model: 'XUV100', year: 2022, price: '$10,000' },
   '200': { name: 'Mahindra 200', model: 'XUV200', year: 2023, price: '$12,000' },
   '300': { name: 'Mahindra 300', model: 'XUV300', year: 2024, price: '$14,000' },
-  '400': { name: 'Mahindra 400', model: 'XUV400', year: 2024, price: '$16,000' }
+  '400': { name: 'Mahindra 400', model: 'XUV400', year: 2024, price: '$16,000' },
+
+  
+  '11': { name: 'Tata Nexon', model: 'Nexon XZ', year: 2022, price: '$11,000' },
+  '21': { name: 'Tata Harrier', model: 'Harrier XT', year: 2023, price: '$15,000' },
+  '31': { name: 'Tata Safari', model: 'Safari LX', year: 2024, price: '$18,000' },
+
+
+  '12': { name: 'Maruti Swift', model: 'Swift VXi', year: 2021, price: '$8,000' },
+  '22': { name: 'Maruti Baleno', model: 'Baleno Alpha', year: 2023, price: '$9,500' },
+
+  
+  '13': { name: 'Hyundai Creta', model: 'Creta SX', year: 2022, price: '$13,000' },
+  '23': { name: 'Hyundai Venue', model: 'Venue S', year: 2023, price: '$12,000' }
 };
 
 onMounted(() => {

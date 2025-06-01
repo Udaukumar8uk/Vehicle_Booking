@@ -2,7 +2,7 @@
 <script setup>
 function logout() {
   localStorage.removeItem('loggedIn')
-  window.location.href = '/login' // or use replace to avoid back navigation
+  window.location.href = '/login' 
 }
 </script>
 
