@@ -4,17 +4,17 @@
       <ul class="flex gap-6 items-center m-0 p-0 list-none">
         <li>
           <router-link
-            to="/CarBrands"
-            class="text-white font-semibold no-underline"
+            to="/car-brands"
+            class="text-white font-semibold no-underline hover:bg-blue-700 transition  "
             active-class="border-b-2 border-white"
           >
-            Home
+            CarBrands
           </router-link>
         </li>
         <li>
           <router-link
             to="/about"
-            class="text-white font-semibold no-underline"
+            class="text-white font-semibold no-underline hover:bg-blue-700 transition "
             active-class="border-b-2 border-white"
           >
             About Us
@@ -23,22 +23,13 @@
         <li>
           <router-link
             to="/contact"
-            class="text-white font-semibold no-underline"
+            class="text-white font-semibold no-underline hover:bg-blue-700 transition "
             active-class="border-b-2 border-white"
           >
             Contact
           </router-link>
         </li>
-        <!--
-        <li>
-          <button
-            @click="handleLogout"
-            class="bg-red-600 px-3 py-1 rounded text-white cursor-pointer hover:bg-red-700 transition"
-          >
-            Logout
-          </button>
-        </li>
-        -->
+        
       </ul>
     </nav>
 

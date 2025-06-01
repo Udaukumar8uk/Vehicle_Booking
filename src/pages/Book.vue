@@ -2,7 +2,7 @@
   <div class="booking-container">
     <component
       :is="currentStepComponent"
-      :carName="carName"
+      :carId="carId"
       :booking="booking"
       @navigate="navigateStep"
     />
@@ -18,7 +18,7 @@ import ConfirmationStep from '../components/ConfirmationStep.vue'
 
 const route = useRoute()
 const router = useRouter()
-const carName = computed(() => route.params.carName || 'Car')
+const carId = computed(() => route.params.carId || 'Unknown')
 const currentStep = computed(() => route.query.step || 'address')
 
 const booking = reactive({
@@ -41,7 +41,7 @@ const currentStepComponent = computed(() => stepsMap[currentStep.value] || Addre
 
 function navigateStep(nextStep) {
   router.push({
-    path: `/book/${carName.value}`,
+    path: `/book/${carId.value}`,
     query: { step: nextStep }
   })
 }

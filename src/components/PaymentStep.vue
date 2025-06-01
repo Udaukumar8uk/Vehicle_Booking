@@ -1,6 +1,6 @@
 <template>
   <div class="max-w-md mx-auto mt-8 p-6 border rounded bg-white shadow">
-    <h2 class="text-2xl font-semibold mb-4">Booking Your Car: {{ carName }}</h2>
+    <h2 class="text-2xl font-semibold mb-4">Booking Your Car: {{ carId }}</h2>
     <h3 class="text-lg mb-6">Step 2: Select Payment Option</h3>
     <form @submit.prevent="emitGoToConfirmation" class="space-y-4">
       <label class="flex items-center space-x-3">
@@ -33,7 +33,7 @@
 </template>
 
 <script setup>
-const props = defineProps(['carName', 'booking']);
+const props = defineProps(['carId', 'booking']);
 const emit = defineEmits(['navigate']);
 function emitGoToConfirmation() {
   emit('navigate', 'confirmation');

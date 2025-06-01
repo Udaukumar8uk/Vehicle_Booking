@@ -4,13 +4,13 @@
     <div>
       <p v-if="isLogin" class="text-gray-600">
         Don’t have an account?
-        <button class="text-blue-500 underline hover:text-blue-700 ml-1" @click="goToSignup">
+        <button class="text-red-500 underline hover:text-blue-700 ml-1" @click="goToSignup">
           Sign up
         </button>
       </p>
       <p v-else class="text-gray-600">
         Already have an account?
-        <button class="text-blue-500 underline hover:text-blue-700 ml-1" @click="goToLogin">
+        <button class="text-red-500 underline hover:text-blue-700 ml-1" @click="goToLogin">
           Login
         </button>
       </p>
